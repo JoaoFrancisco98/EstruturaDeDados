@@ -6,9 +6,10 @@ typedef struct lista{
     struct lista *link;
 }no;
 
-no*crialista(int n){
+no *crialista(int n){
     no *ini, *p, *ult;
     int valor;
+    ini=ult=NULL;
     for(int i=1;i<=n;i++){
         printf("\nDigite o valor %d da lista: ", i);
         scanf("%d", &valor);
@@ -29,7 +30,6 @@ void escrevelista(no*p){
         p=p->link;
     }
 }
-
 int main(){
     
     no *primeira;
@@ -39,6 +39,7 @@ int main(){
         printf("\nEntre com o numero de nois: ");
         scanf("%d", &n);
         }while(n<0);
+        
 primeira=crialista(n);
 if(primeira!=NULL){
     printf("\nLista criada");
